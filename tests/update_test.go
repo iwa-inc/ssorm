@@ -6,7 +6,7 @@ import (
 	"testing"
 
 	"cloud.google.com/go/spanner"
-	"github.com/10antz-inc/ssorm"
+	"github.com/iwa-inc/ssorm"
 )
 
 func TestUpdateModel(t *testing.T) {

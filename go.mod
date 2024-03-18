@@ -5,7 +5,6 @@ go 1.19
 require (
 	cloud.google.com/go v0.86.0
 	cloud.google.com/go/spanner v1.23.0
-	github.com/10antz-inc/ssorm v1.0.2
 	github.com/rs/zerolog v1.29.1
 	github.com/samber/lo v1.38.1
 	go.opentelemetry.io/otel v1.11.1
@@ -23,7 +22,6 @@ require (
 	github.com/jstemmer/go-junit-report v0.9.1 // indirect
 	github.com/mattn/go-colorable v0.1.12 // indirect
 	github.com/mattn/go-isatty v0.0.14 // indirect
-	github.com/sirupsen/logrus v1.8.1 // indirect
 	go.opencensus.io v0.23.0 // indirect
 	golang.org/x/exp v0.0.0-20220303212507-bbda1eaf7a17 // indirect
 	golang.org/x/lint v0.0.0-20210508222113-6edffad5e616 // indirect

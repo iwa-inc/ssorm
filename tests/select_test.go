@@ -3,8 +3,8 @@ package tests
 import (
 	"cloud.google.com/go/spanner"
 	"context"
-	"github.com/10antz-inc/ssorm"
-	"github.com/10antz-inc/ssorm/utils"
+	"github.com/iwa-inc/ssorm"
+	"github.com/iwa-inc/ssorm/utils"
 	"testing"
 )
 

@@ -3,7 +3,7 @@ package tests
 import (
 	"cloud.google.com/go/spanner"
 	"context"
-	"github.com/10antz-inc/ssorm"
+	"github.com/iwa-inc/ssorm"
 	"testing"
 )
 
@@ -76,8 +76,8 @@ func TestGetColumnReadOnly(t *testing.T) {
 	err := ssorm.Model(&singer).Select([]string{"SingerId,FirstName,LastName"}).
 		Where("SingerId in ? and LastName = ? ",
 			[]int{12, 13, 14},
-			spanner.NullString{StringVal: "Morales",Valid: true},
-			).First(ctx, rtx)
+			spanner.NullString{StringVal: "Morales", Valid: true},
+		).First(ctx, rtx)
 
 	if err != nil {
 		t.Fatalf("Error happened when get singer, got %v", err)

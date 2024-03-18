@@ -5,7 +5,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"github.com/10antz-inc/ssorm"
+	"github.com/iwa-inc/ssorm"
 	"google.golang.org/api/iterator"
 	"strings"
 	"testing"

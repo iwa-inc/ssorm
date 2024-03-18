@@ -7,7 +7,7 @@ import (
 	"time"
 
 	"cloud.google.com/go/spanner"
-	"github.com/10antz-inc/ssorm"
+	"github.com/iwa-inc/ssorm"
 )
 
 func TestInsertDeleteModel(t *testing.T) {

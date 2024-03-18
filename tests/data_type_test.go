@@ -4,7 +4,7 @@ import (
 	"cloud.google.com/go/civil"
 	"cloud.google.com/go/spanner"
 	"context"
-	"github.com/10antz-inc/ssorm"
+	"github.com/iwa-inc/ssorm"
 	"testing"
 	"time"
 )

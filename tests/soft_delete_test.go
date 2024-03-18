@@ -4,7 +4,7 @@ import (
 	"cloud.google.com/go/spanner"
 	"context"
 	"fmt"
-	"github.com/10antz-inc/ssorm"
+	"github.com/iwa-inc/ssorm"
 	"testing"
 )
 
@@ -18,13 +18,13 @@ func TestSoftDeleteModel(t *testing.T) {
 	insert := Singers{}
 	insert.SingerId = 12
 	//insert.FirstName = "updateModel"
-	insert.LastName =spanner.NullString{StringVal: "updateFlastNameModel",Valid: true}
+	insert.LastName = spanner.NullString{StringVal: "updateFlastNameModel", Valid: true}
 
 	var singers []*Singers
 	singer := Singers{}
 	var count int64
 	var subSingers []*Singer
-	
+
 	_, err := client.ReadWriteTransaction(ctx, func(ctx context.Context, txn *spanner.ReadWriteTransaction) error {
 		err := ssorm.SoftDeleteModel(&singers).Find(ctx, txn)
 		err = ssorm.SoftDeleteModel(&subSingers).Where("SingerId > ?", 12).TableName("Singers").AddSub(Albums{}, "").AddSub(Concerts{}, "SingerId > ?", 12).Find(ctx, txn)

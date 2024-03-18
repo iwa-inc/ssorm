@@ -3,21 +3,21 @@ package ssormotel
 import (
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/attribute"
-	"go.opentelemetry.io/otel/trace"
 	semconv "go.opentelemetry.io/otel/semconv/v1.10.0"
+	"go.opentelemetry.io/otel/trace"
 )
 
 const (
-	name = "github.com/10antz-inc/ssorm/ssormotel"
+	name = "github.com/iwa-inc/ssorm/ssormotel"
 )
 
 type config struct {
 	tp     trace.TracerProvider
 	tracer trace.Tracer
 
-	attrs []attribute.KeyValue
+	attrs                []attribute.KeyValue
 	enableQueryStatement bool
-	statement string
+	statement            string
 }
 
 type Option interface {
@@ -33,7 +33,7 @@ func (fn option) apply(conf *config) {
 func newConfig(opts ...Option) *config {
 	tp := otel.GetTracerProvider()
 	conf := &config{
-		tp: tp,
+		tp:     tp,
 		tracer: tp.Tracer(name),
 		attrs: []attribute.KeyValue{
 			semconv.DBSystemKey.String("spanner"),
