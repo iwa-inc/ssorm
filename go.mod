@@ -1,4 +1,4 @@
-module github.com/10antz-inc/ssorm/v2
+module github.com/iwa-inc/ssorm
 
 go 1.19
 

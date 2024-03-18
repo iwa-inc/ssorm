@@ -8,7 +8,7 @@ import (
 	"strings"
 
 	"cloud.google.com/go/spanner"
-	"github.com/10antz-inc/ssorm/v2/utils"
+	"github.com/iwa-inc/ssorm/utils"
 )
 
 type Builder struct {

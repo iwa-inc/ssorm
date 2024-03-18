@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/10antz-inc/ssorm/v2/instrumentation/ssormotel"
-	"github.com/10antz-inc/ssorm/v2/logger"
-	"github.com/10antz-inc/ssorm/v2/utils"
+	"github.com/iwa-inc/ssorm/instrumentation/ssormotel"
+	"github.com/iwa-inc/ssorm/logger"
+	"github.com/iwa-inc/ssorm/utils"
 
 	"cloud.google.com/go/spanner"
 	"google.golang.org/api/iterator"
